@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GERAK · Dasar Privasi</title>
+<meta name="description" content="Dasar privasi GERAK: data murid kekal dalam peranti guru dan dalam Google Drive guru sendiri.">
+<meta name="author" content="ameermustaqeem@klazsixedu">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Shrikhand&display=swap" rel="stylesheet">
+<style>
+:root{--krim:#FFF4E2;--coklat:#3E2417;--pudar:#7A5A45;--karat:#F0563A;--firus:#1FB5A3;--garis:#F0DEC4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--krim);color:var(--coklat);font-family:"Fredoka","Segoe UI",Tahoma,Arial,sans-serif;font-size:18px;line-height:1.6}
+.bekas{width:min(820px,100% - 32px);margin:0 auto;padding:36px 0 60px}
+.logo{font-family:"Shrikhand","Cooper Black",serif;font-size:2.4rem;line-height:1;text-decoration:none;color:var(--karat)}
+h1{font-size:2rem;margin:18px 0 4px}
+.tarikh{color:var(--pudar);margin:0 0 26px}
+.kad{background:#fff;border-radius:22px;padding:22px 26px;margin:0 0 16px;box-shadow:0 4px 0 rgba(62,36,23,.07)}
+h2{font-size:1.25rem;margin:0 0 8px}
+p,li{margin:6px 0}
+ul{padding-left:22px}
+.ringkas{background:#E2F6F2;border-radius:22px;padding:18px 24px;margin:0 0 20px;font-weight:500}
+code{background:#F5EADB;padding:2px 6px;border-radius:6px;font-size:.9em}
+a{color:var(--karat)}
+footer{color:var(--pudar);font-size:.9rem;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="bekas">
+  <a class="logo" href="./">GERAK</a>
+  <h1>Dasar Privasi</h1>
+  <p class="tarikh">Berkuat kuasa: 13 November 2026</p>
+
+  <div class="ringkas">Ringkasnya: GERAK tidak mempunyai pelayan sendiri dan tidak mengumpul data murid. Data kekal dalam laptop guru. Jika guru memilih segerak, salinan data disimpan dalam Google Drive guru sendiri, dan hanya guru yang memilikinya.</div>
+
+  <div class="kad">
+    <h2>1. Siapa kami</h2>
+    <p>GERAK (Gamified Education with Responsive AI &amp; Kinesthetic Learning) ialah aplikasi web pendidikan yang dibangunkan oleh Ameer Mustaqeem bin Mohamad, guru di Malaysia. Aplikasi ini dihoskan sebagai fail statik di GitHub Pages.</p>
+  </div>
+
+  <div class="kad">
+    <h2>2. Data yang digunakan oleh GERAK</h2>
+    <ul>
+      <li><b>Data kelas yang dimasukkan oleh guru:</b> nama kelas, nama murid (atau nama panggilan), jantina jika diisi, rekod jawapan permainan, coin, lencana dan keputusan ujian.</li>
+      <li><b>Kandungan permainan:</b> soalan, jawapan, gambar dan rakaman suara yang dicipta oleh guru.</li>
+      <li><b>Gambar kamera:</b> diproses terus dalam pelayar untuk mengesan tangan, badan, bola atau kad. Gambar dan video <b>tidak dirakam, disimpan atau dihantar</b> ke mana-mana.</li>
+    </ul>
+  </div>
+
+  <div class="kad">
+    <h2>3. Di mana data disimpan</h2>
+    <ul>
+      <li><b>Dalam pelayar peranti guru</b> (localStorage dan IndexedDB). Ini ialah simpanan utama, dan GERAK berfungsi tanpa internet.</li>
+      <li><b>Dalam Google Drive guru (pilihan).</b> Jika guru menekan "Log masuk dengan Google", GERAK membina fail <b>GERAK – Data Kelas</b> dalam Drive guru, dan menyalin data kelas ke fail itu. Data dihantar terus dari peranti guru ke Google. Ia tidak melalui pelayan GERAK atau pembangun.</li>
+      <li>Pembangun GERAK <b>tidak menerima, melihat atau menyimpan</b> data murid atau data guru.</li>
+    </ul>
+  </div>
+
+  <div class="kad">
+    <h2>4. Kebenaran Google yang diminta</h2>
+    <p>GERAK hanya meminta skop <code>drive.file</code>. Dengan skop ini, GERAK hanya boleh membuat dan mengemas kini <b>fail yang dibina oleh GERAK sendiri</b>. GERAK <b>tidak boleh</b> melihat, membaca atau mengubah fail lain dalam Google Drive guru.</p>
+    <p>Alamat e-mel akaun Google dipaparkan dalam GERAK supaya guru tahu akaun mana yang digunakan. Alamat itu disimpan dalam pelayar guru sahaja.</p>
+    <p>Penggunaan maklumat yang diterima daripada API Google mematuhi <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Dasar Data Pengguna Perkhidmatan API Google</a>, termasuk keperluan Penggunaan Terhad (Limited Use).</p>
+  </div>
+
+  <div class="kad">
+    <h2>5. Perkhidmatan pihak ketiga</h2>
+    <ul>
+      <li><b>Google</b>: log masuk dan Google Drive/Sheets (jika segerak dihidupkan).</li>
+      <li><b>MediaPipe</b>: model AI dimuat turun dari pelayan Google, dan diproses dalam peranti.</li>
+      <li><b>PeerJS</b>: digunakan untuk menyambung telefon guru sebagai kamera atau alat kawalan. Video bergerak terus antara peranti.</li>
+      <li><b>GitHub Pages</b>: menghoskan fail aplikasi.</li>
+    </ul>
+  </div>
+
+  <div class="kad">
+    <h2>6. Kawalan guru</h2>
+    <ul>
+      <li>Guru boleh memadam semua data murid dalam peranti melalui <b>Pusat Guru → Kelas → Privasi data murid</b>.</li>
+      <li>Guru boleh log keluar dari Google pada bila-bila masa. Fail dalam Drive kekal milik guru, dan boleh dipadam terus dari Google Drive.</li>
+      <li>Guru boleh menarik balik kebenaran GERAK di <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a>.</li>
+      <li>Kami menggalakkan guru menggunakan nama panggilan murid jika polisi sekolah memerlukannya.</li>
+    </ul>
+  </div>
+
+  <div class="kad">
+    <h2>7. Kanak-kanak</h2>
+    <p>GERAK digunakan oleh guru dalam bilik darjah. Murid tidak membuat akaun dan tidak log masuk. Semua data murid diurus oleh guru.</p>
+  </div>
+
+  <div class="kad">
+    <h2>8. Hubungi</h2>
+    <p>Sebarang pertanyaan tentang privasi: <b>[e-mel hubungan anda]</b></p>
+  </div>
+
+  <footer>GERAK · Hak cipta © 2026 ameermustaqeem@klazsixedu · <a href="tentang.html">Tentang GERAK</a></footer>
+</div>
+</body>
+</html>
