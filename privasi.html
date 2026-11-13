@@ -36,7 +36,7 @@ footer{color:var(--pudar);font-size:.9rem;margin-top:30px}
 
   <div class="kad">
     <h2>1. Siapa kami</h2>
-    <p>GERAK (Gamified Education with Responsive AI &amp; Kinesthetic Learning) ialah aplikasi web pendidikan yang dibangunkan oleh Ameer Mustaqeem bin Mohamad, guru di Malaysia. Aplikasi ini dihoskan sebagai fail statik di GitHub Pages.</p>
+    <p>GERAK (Gamified Education with Responsive AI &amp; Kinesthetic Learning) ialah aplikasi web pendidikan yang dibangunkan oleh Ameer Mustaqeem bin Mohamad, guru di Malaysia. Aplikasi ini dihoskan sebagai fail statik di Vercel (kelasgerak.vercel.app).</p>
   </div>
 
   <div class="kad">
@@ -53,7 +53,8 @@ footer{color:var(--pudar);font-size:.9rem;margin-top:30px}
     <ul>
       <li><b>Dalam pelayar peranti guru</b> (localStorage dan IndexedDB). Ini ialah simpanan utama, dan GERAK berfungsi tanpa internet.</li>
       <li><b>Dalam Google Drive guru (pilihan).</b> Jika guru menekan "Log masuk dengan Google", GERAK membina fail <b>GERAK – Data Kelas</b> dalam Drive guru, dan menyalin data kelas ke fail itu. Data dihantar terus dari peranti guru ke Google. Ia tidak melalui pelayan GERAK atau pembangun.</li>
-      <li>Pembangun GERAK <b>tidak menerima, melihat atau menyimpan</b> data murid atau data guru.</li>
+      <li>Pembangun GERAK <b>tidak menerima, melihat atau menyimpan</b> data murid, data kelas atau alamat e-mel guru.</li>
+      <li><b>Statistik penggunaan tanpa nama.</b> Bila guru log masuk dengan Google, dan sekali sehari bila GERAK dibuka, GERAK menghantar kepada pembangun: (1) satu kod rawak yang dijana daripada akaun guru melalui fungsi cincang sehala (SHA-256), (2) negeri yang dipilih oleh guru, dan (3) sama ada segerak Drive digunakan. Alamat e-mel, nama dan data murid <b>tidak dihantar</b>. Statistik ini hanya digunakan untuk mengetahui bilangan guru yang menggunakan GERAK mengikut negeri.</li>
     </ul>
   </div>
 
@@ -70,7 +71,8 @@ footer{color:var(--pudar);font-size:.9rem;margin-top:30px}
       <li><b>Google</b>: log masuk dan Google Drive/Sheets (jika segerak dihidupkan).</li>
       <li><b>MediaPipe</b>: model AI dimuat turun dari pelayan Google, dan diproses dalam peranti.</li>
       <li><b>PeerJS</b>: digunakan untuk menyambung telefon guru sebagai kamera atau alat kawalan. Video bergerak terus antara peranti.</li>
-      <li><b>GitHub Pages</b>: menghoskan fail aplikasi.</li>
+      <li><b>Vercel</b>: menghoskan fail aplikasi.</li>
+      <li><b>Google Apps Script</b>: menerima statistik penggunaan tanpa nama (lihat bahagian 3).</li>
     </ul>
   </div>
 
@@ -91,7 +93,7 @@ footer{color:var(--pudar);font-size:.9rem;margin-top:30px}
 
   <div class="kad">
     <h2>8. Hubungi</h2>
-    <p>Sebarang pertanyaan tentang privasi: <b>[ameermustaqeem9@gmail.com]</b></p>
+    <p>Sebarang pertanyaan tentang privasi: <b>[e-mel hubungan anda]</b></p>
   </div>
 
   <footer>GERAK · Hak cipta © 2026 ameermustaqeem@klazsixedu · <a href="tentang.html">Tentang GERAK</a></footer>
